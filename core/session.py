@@ -125,7 +125,7 @@ class Sessions:
 
     attributes:
         - sessions: A dictionary of user sessions.
-    """
+    """ 
 
     def __init__(self):
         self.sessions = {}
