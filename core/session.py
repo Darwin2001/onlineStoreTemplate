@@ -98,6 +98,7 @@ class UserSession:
     def update_total_cost(self) -> None:
         """
         Updates the total cost of the user's cart.
+        
         """
         self.total_cost = calculate_total_cost(self.cart)
 

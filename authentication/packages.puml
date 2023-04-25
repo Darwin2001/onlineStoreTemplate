@@ -1,0 +1,30 @@
+@startuml packages
+set namespaceSeparator none
+package "authentication" as authentication #aliceblue {
+  class "User" {
+    -username: str
+    -password_hash: str
+    +__init__(self, username: str, password_hash: str) -> None
+    +get_username(self) -> str
+    +check_password(self, password: str) -> bool
+  }
+  class "Session" {
+    -session_id: str
+    -user_id: str
+    +__init__(self, session_id: str, user_id: str) -> None
+    +get_user_id(self) -> str
+    +get_session_id(self) -> str
+  }
+}
+package "authentication.authTools" as authentication.authTools #aliceblue {
+   class "PasswordTools" {
+    +password_hash(password: str) -> str
+    +password_check(password: str, password_hash: str) -> bool
+   }
+  
+   class "TokenTools" {
+    +token_generate(user_id: str) -> str
+    +token_decode(token: str) -> str
+   }
+}
+@enduml
