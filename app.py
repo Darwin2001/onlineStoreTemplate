@@ -109,6 +109,10 @@ def register():
     return  redirect(url_for('login_page'))
 
 
+@app.route('/checkout')
+def checkout_page():
+    return render_template('checkout.html')
+
 @app.route('/checkout', methods=['POST'])
 def checkout():
     """
