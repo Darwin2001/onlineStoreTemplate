@@ -26,7 +26,7 @@ def index_page():
     returns:
         - None
     """
-    print(products)
+    # print(products)
     return render_template('index.html', username=username, products=products, sessions=sessions)
 
 @app.route('/login')

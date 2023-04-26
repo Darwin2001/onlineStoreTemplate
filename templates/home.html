@@ -1,7 +1,10 @@
 {% extends "layout.html" %}
+{%block title%}
+Home
+{%endblock%}
 
 {% block content %}
-
+<!-- MSR -->
 <section class="hero-section">
     <div class="main-hero-container">
         <div class="carousel-container">
@@ -16,6 +19,7 @@
                 </div>
             </div>
 </section>
+<!-- MSR -->
 
 <div class="row" id="products_page">
     <div class="col-md-12">
@@ -28,7 +32,9 @@
                         {% for product in products %}
                         <div class="col-md-4">
                             <div class="product_card" id="product_card">
-                                <img src="{{ product.image_url }}" class="product_card-img" alt="...">
+                                <div class="product_card-top">
+                                <img src="{{ product.image_url }}" class="product_card-img product_card-image" alt="...">
+                                </div>
                                 <div class="product_card-body">
                                     <h5 class="product_card-title">{{ product.item_name }}</h5>
                                     <p class="product_card-text">{{ product.info }}</p>
@@ -50,6 +56,4 @@
         </div>
     </div>
 </div>
-
-
 {% endblock %}

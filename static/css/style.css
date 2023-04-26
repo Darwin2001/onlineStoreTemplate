@@ -158,7 +158,7 @@
 .first-carousel-element {
     width: 100vw;
     height: 80vh;
-    background-image: linear-gradient(to right, #ffe262, #fff069);
+    background-image: linear-gradient(to right, #e4cc62, #e2d132);
     font-family: var(--font-Roboto);
     color: white;
     position: relative;
@@ -260,3 +260,8 @@
     bottom: 0;
     width: 100%;
   } */
+
+  .product_card-image{
+    height: 200px;
+  }
+/* Monish Soundar Raj */
