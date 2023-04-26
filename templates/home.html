@@ -2,11 +2,25 @@
 
 {% block content %}
 
+<section class="hero-section">
+    <div class="main-hero-container">
+        <div class="carousel-container">
+            <div class="slide">
+                <div class="first-carousel-element">
+                    <h1 class="text-nike">NIKE AIR</h1>
+                    <div class="nike-green-box">
+                        <img class="nike-green" src="{{ url_for('static', filename='images/yellow-with-shadow.png') }}" alt="NIKE SHOES IMAGE">
+                    </div>
+                    <h2 class="bottom-text-first-element">BE LENGENDARY</h2>
+                    <img src="{{ url_for('static', filename='images/nike-logo.png') }}" alt="nike logo" class="nike-logo">
+                </div>
+            </div>
+</section>
+
 <div class="row" id="products_page">
     <div class="col-md-12">
         <h3>Products</h3>
         <hr>
-        <h1>Hello</h1>
         <div class="row">
             <form action="/checkout" method="post">
                 <div class="form-group">

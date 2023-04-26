@@ -6,8 +6,6 @@ CREATE TABLE inventory (
     stock INTEGER NOT NULL,
     image_url VARCHAR(255) NOT NULL,
     category VARCHAR(255) NOT NULL
-    brand VARCHAR(255) NOT NULL
-    
 );
 
 CREATE TABLE users (

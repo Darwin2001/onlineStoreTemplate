@@ -1,12 +1,31 @@
 {% extends "layout.html" %}
+{%block title%}
+Shoe Store
+{%endblock%}
 
 {% block content %}
-<div class="row">
+<!-- <div class="row">
     <div class="col-md-12" id="index_buttons">
         <a href="/login" class="btn btn-primary" id="login_button">Login</a>
         <a href="/register" class="btn btn-primary" id="register_button">Register</a>
     </div>
-</div>
+</div> -->
+
+<section class="hero-section">
+    <div class="main-hero-container">
+        <div class="carousel-container">
+            <div class="slide">
+                <div class="first-carousel-element">
+                    <h1 class="text-nike">NIKE AIR</h1>
+                    <div class="nike-green-box">
+                        <img class="nike-green" src="{{ url_for('static', filename='images/yellow-with-shadow.png') }}" alt="NIKE SHOES IMAGE">
+                    </div>
+                    <h2 class="bottom-text-first-element">BE LENGENDARY</h2>
+                    <img src="{{ url_for('static', filename='images/nike-logo.png') }}" alt="nike logo" class="nike-logo">
+                </div>
+            </div>
+</section>
+
 
 <div class="row" id="products_page">
     <div class="col-md-12">
@@ -35,4 +54,4 @@
             </form>
         </div>
     </div>
-    {% endblock %}
+{% endblock %}

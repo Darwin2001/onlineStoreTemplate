@@ -2,7 +2,7 @@
 
 from authentication.authTools import login_pipeline, update_passwords, hash_password
 from database.db import Database
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 from core.session import Sessions
 
 app = Flask(__name__)
@@ -26,8 +26,8 @@ def index_page():
     returns:
         - None
     """
+    print(products)
     return render_template('index.html', username=username, products=products, sessions=sessions)
-
 
 @app.route('/login')
 def login_page():
@@ -68,6 +68,7 @@ def login():
         return render_template('index.html')
 
 
+
 @app.route('/register')
 def register_page():
     """
@@ -80,7 +81,6 @@ def register_page():
         - None
     """
     return render_template('register.html')
-
 
 @app.route('/register', methods=['POST'])
 def register():
@@ -105,7 +105,8 @@ def register():
     salt, key = hash_password(password)
     update_passwords(username, key, salt)
     db.insert_user(username, key, email, first_name, last_name)
-    return render_template('index.html')
+    # MSR - changed the render template to redirect to login 
+    return  redirect(url_for('login_page'))
 
 
 @app.route('/checkout', methods=['POST'])

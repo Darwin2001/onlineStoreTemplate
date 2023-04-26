@@ -123,3 +123,140 @@
     /* centered on the page */
     text-align: center;
 }
+
+
+/* Monish Soundar Raj */
+
+/*overall-page-style-Monish Soundar Raj*/
+* {
+    padding: 0;
+    margin: 0;
+  }
+  :root {
+    --font-Roboto: "Roboto", sans-serif;
+    --font-Bebas: "Bebas Neue", cursive;
+    --font-Raleway: 'Raleway', sans-serif;
+  }
+  html
+  {
+    font-size: 1vw;
+  }
+  body{
+    height: 100%;
+  }
+
+/* carousel-common-element-style - Monish Soundar Raj*/
+.nike-logo {
+    width: 6rem;
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+/* First(active) carousel-element - Monish Soundar Raj*/
+.first-carousel-element {
+    width: 100vw;
+    height: 80vh;
+    background-image: linear-gradient(to right, #ffe262, #fff069);
+    font-family: var(--font-Roboto);
+    color: white;
+    position: relative;
+    font-size: 2vh;
+  }
+  .nike-green {
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20rem;
+    transform: rotatey(3.142rad) translate(50%, -50%);
+  }
+  .shoe-name,.shoe-price{
+    font-family: var(--font-Bebas);
+  }
+  .text-nike {
+    font-size: 15rem;
+    opacity: 0.5;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-Bebas);
+    z-index: 0;
+  }
+  .bottom-text-first-element {
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .container{
+    margin-top: 50px;
+    margin-bottom: 200px;
+  }
+
+  .nike-logo-class{
+    width: 40%;
+    margin: 0;
+  }
+ 
+  .d-flex {
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    cursor: pointer;
+    background-color: aqua;
+    color: black;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 20px;
+    height: 100%;
+    transition: box-shadow 0.3s;
+  }
+
+  .d-flex:hover{
+    box-shadow: 3px 3px 3px black;
+    
+  }
+
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    margin-bottom: 60px; /* adjust height of footer */
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* adjust height of footer */
+    background-color: #f5f5f5;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    transform: translate(-101%);
+  }
+
+  .cart-icon{
+    cursor: pointer;
+  }
+
+  
+  /* .footer{
+    background-color: black;
+    color: white;
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    min-width: 100px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  } */
