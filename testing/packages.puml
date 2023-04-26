@@ -1,11 +1,26 @@
 @startuml packages
 set namespaceSeparator none
 package "testing" as testing #aliceblue {
-}
+
 package "testing.authTests" as testing.authTests #aliceblue {
+    class "authenticationTests"{
+        +userLoginTest(expected, actual) -> bool
+        +userLogoutTest(expected, actual) -> bool
+        +userEncodePassword(expected, actual) -> bool
+        +userDecodePassword(expected, actual) -> bool
+    }
 }
 package "testing.coreTests" as testing.coreTests #aliceblue {
+    class "coreTests" {
+        +testAdditionTotal(expected, result) -> bool
+        +testDiscountTotal(expected, result) -> bool
+    }
 }
 package "testing.dbTests" as testing.dbTests #aliceblue {
+    class "databaseTesting"{
+        +itemInCartTest(expected, result) -> bool
+        +itemRemovedFromCart(expected, result) -> bool   
+        }
+}
 }
 @enduml
