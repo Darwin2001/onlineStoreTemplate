@@ -1,0 +1,12 @@
+@startuml customer
+left to right direction
+actor customer
+rectangle "Use Cases" {
+  (Searching for shoes by brand)
+  (Viewing product details to make a purchase)
+}
+customer --> (Searching for shoes by brand)
+customer --> (Viewing product details to make a purchase)
+@enduml
+
+

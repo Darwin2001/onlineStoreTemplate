@@ -1,0 +1,9 @@
+@startuml searchshoes
+actor User
+boundary "Online Shoe Store" as online
+User -> online: Search for shoes by brand
+activate online
+online -> online: Query database for shoes
+online -> User: Display search results
+deactivate online
+@enduml

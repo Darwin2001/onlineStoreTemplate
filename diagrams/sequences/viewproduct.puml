@@ -1,0 +1,10 @@
+@startuml viewproduct
+actor User
+boundary "Online Shoe Store" as online
+User -> online: View product details
+activate online
+online -> online: Query database for product details
+online -> User: Display product details
+deactivate online
+@enduml
+
