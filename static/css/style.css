@@ -263,4 +263,18 @@
   .product_card-image{
     height: 200px;
   }
+
+  /* Fell free to change the color if needed */
+  .cart-link{
+    border: 1px white solid;
+    color: rgb(231, 216, 216);
+    transition: background-color 0.3s;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: bold;
+  }
+
+  .cart-link:hover{
+    background-color: red;
+  }
 /* Monish Soundar Raj */
