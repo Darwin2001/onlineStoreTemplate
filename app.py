@@ -43,6 +43,21 @@ def login_page():
     return render_template('login.html')
 
 
+# Route to logout user
+@app.route('/logout')
+def logout():
+    """
+    Removes the session using username to logout the user
+
+    args:
+        - None
+
+    returns:
+        - None
+    """
+    sessions.remove_session(username)
+    return redirect(url_for('index_page'))
+
 @app.route('/home', methods=['POST'])
 def login():
     """
