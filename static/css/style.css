@@ -263,14 +263,16 @@
   .product_card-image{
     height: 200px;
   }
-
-  /* Fell free to change the color if needed */
+  .overflow-hide{
+    overflow: hidden;
+  }
+  /* Feel free to change the color if needed */
   .cart-link{
     border: 1px white solid;
     color: rgb(231, 216, 216);
     transition: background-color 0.3s;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
     font-weight: bold;
   }
 
