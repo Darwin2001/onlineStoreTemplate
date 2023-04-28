@@ -46,6 +46,30 @@ def test_add_new_session() -> tuple:
         return False, error
     else:
         return True, "Sessions dictionary is not empty."
+    
+# Tests logout function - MSR
+def test_remove_session() -> tuple:
+    """
+    Tests that a session is removed correctly.
+
+    args:
+        - None
+
+    return: 
+        - a tuple is returned containing a boolean and a string, 
+          where boolean is True if the test passed and False if the test failed.
+          The String in the tuple gives a error report if the test failed.
+    """
+    db = Database("database/storeRecords.db")
+    sessions = Sessions()
+    sessions.remove_session("test")
+
+    if len(sessions.sessions) == 0:
+        success = "removed session successfully"
+        return True, success
+    else:
+        error = f"Error in test_remove_session: Sessions dictionary is note empty.\n  - Actual: {len(sessions.sessions)}"
+        return False, error
 
 
 def test_get_session() -> tuple:
