@@ -1,3 +1,8 @@
-I did not have the opporunity do any test - review as most of our (groups) work was in the front-end side of the application. 
-I have written a test to check if the user was logging out in the coreTests.py file.
+As most of our groups work was in the front-end side of the application, there was nothing to test in the using the .py file in the testing folder. 
+So, I did a live testing on the locally hosted site, which is as follows.
+
+1) In the live site, I tested if the new database inventory changed by Ben was working: It was a success, I was able to pull the data from the updated database to the site in the front-end.
+
+I have written a test to check if the user was logging out. This test is written in coreTests.py file.
+
 Will update monishTestReview.txt file if anything changes. 
