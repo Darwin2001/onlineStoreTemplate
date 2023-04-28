@@ -1,0 +1,3 @@
+I did not have the opporunity do any test - review as most of our (groups) work was in the front-end side of the application. 
+I have written a test to check if the user was logging out in the coreTests.py file.
+Will update monishTestReview.txt file if anything changes. 
