@@ -54,6 +54,9 @@ def logout():
 
     returns:
         - None
+    
+    modifies:
+        - sessions: removes a previous session from the sessions object
     """
     sessions.remove_session(username)
     return redirect(url_for('index_page'))
@@ -77,7 +80,8 @@ def login():
     password = request.form['password']
     if login_pipeline(username, password):
         sessions.add_new_session(username, db)
-        return render_template('home.html', products=products, sessions=sessions)
+        # Added username to be send to the home.html - Monish
+        return render_template('home.html', products=products, sessions=sessions, username=username)
     else:
         print(f"Incorrect username ({username}) or password ({password}).")
         return render_template('index.html')

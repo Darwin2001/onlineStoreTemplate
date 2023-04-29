@@ -7,16 +7,17 @@ This folder only contains html files for the application. Flask assumes html fil
 This file contains the html for the checkout page. At present, this simply displays the calculated total for a person's invoice. This page is an easy place to add additional functionality, such as an itemized invoice, payment form, or order confirmation page.
 
 ## home.html File
-
-This file contains the html for a user's home page, which only contains the product cards for items in the inventory. Adding a search bar, a "featured items" section, or displaying the current user's name can be done here with only minimal database query implementation.
+<!-- Changed -->
+This file contains the html for a user's home page, which contains navbar, shoe poster, and product cards for items in the inventory.
+Also, this file now can show the username of the user login in and a logout button to logout the user.
 
 ## index.html File
-
-Here is where the html for the main page of the application is stored. This is nearly identical to the `home.html` file, but it also contains buttons at the top for the user to login or register. Any functionality students add here will likely need to extend to other pages as well, so be sure to keep that in mind.
+<!-- Changed -->
+Here is where the html for the main page of the application is stored. This is nearly identical to the `home.html` file, but it also contains buttons at the top for the user to login or register, and also it contains a footer. 
 
 ## layout.html File
-
-The `layout.html` file is the base for all other html files the application uses, so keep a close eye on any modifications made to it. A couple of comments are included to denote where the content extensions are setup for flask to connect with other html files.
+<!-- Changed -->
+This file contains the code for navbar, footer, and the title, & content block.
 
 ## login.html File
 

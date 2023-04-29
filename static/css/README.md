@@ -1,0 +1,1 @@
+Monish Soundar Raj - Several lines of CSS has been added addition to the CSS file. Have given comments for the newly added CSS styles in the style.css file. The new styles added are from 128-269, some of the nike shoe poster css has been reused from my previous project (https://github.com/MonishSoundarRaj/Shoeshop).
