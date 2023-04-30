@@ -623,6 +623,19 @@ class Database:
         self.cursor.execute(
             "SELECT * FROM sales WHERE cost BETWEEN ? AND ?", (start_cost, end_cost))
         return self.cursor.fetchall()
+    def get_cart_by_username(self, username: str):
+        """
+        Gets the sales for a user from the database.
+
+        args:
+            - username: The username of the user whose sales to get.
+
+        returns:
+            - The sales for the user with the given username.
+        """
+        self.cursor.execute(
+            "SELECT * FROM cart WHERE username = ?", (username,))
+        return self.cursor.fetchall()
 
     # ------ Setter methods ------
 

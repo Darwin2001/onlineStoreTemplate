@@ -27,4 +27,11 @@ CREATE TABLE sales (
     FOREIGN KEY (username) REFERENCES users(username),
     FOREIGN KEY (item_id) REFERENCES inventory(id)
 );
+CREATE TABLE cart(
+    username VARCHAR(255) NOT NULL
+    item_id INTEGER NOT NULL,
+    quantity INTEGER NOT NULL,
+    FOREIGN KEY (username) REFERENCES users(username),
+    FOREIGN KEY (item_id) REFERENCES inventory(id)
+)
 

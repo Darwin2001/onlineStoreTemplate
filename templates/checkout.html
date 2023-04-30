@@ -1,20 +1,13 @@
 {% extends "layout.html" %}
-{%block title%}
-Cart
-{%endblock%}
-{%block nav%}
-<li class="nav-item">
-    <a href="/logout" class="nav-link">Logout</a>
-</li>
-{%endblock%}
+
 {% block content %}
+<h1>Shopping Cart</h1>
 <div class="row" id="products_page">
     <div class="col-md-12">
         <h3>Your Order</h3>
-        <hr>
-        <table class="table">
-        <p>{{ total_cost }}</p>
+        <p>{{cart}}</p>        
         <div class="row">
+
             <p>{{ total_cost }} </p>
         </div>
     </div>
