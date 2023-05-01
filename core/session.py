@@ -95,14 +95,15 @@ class UserSession:
         """
         del self.cart[id]
 
-    def update_total_cost(self) -> None:
+    def update_total_cost(self) -> dict:
         """
         Updates the total cost of the user's cart.
         
         """
         self.total_cost = calculate_total_cost(self.cart)
+        return self.cart
 
-    def submit_cart(self) -> None:
+    def submit_cart(self) -> dict:
         """
         Called when the order is submitted. Finalizes user session details.
 
@@ -112,8 +113,9 @@ class UserSession:
         returns:
             - None
         """
-        self.update_total_cost()
+        items = self.update_total_cost()
         self.date = datetime.now()
+        return items
 
 
 class Sessions:

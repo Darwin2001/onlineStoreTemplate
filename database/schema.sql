@@ -33,5 +33,5 @@ CREATE TABLE cart(
     quantity INTEGER NOT NULL,
     FOREIGN KEY (username) REFERENCES users(username),
     FOREIGN KEY (item_id) REFERENCES inventory(id)
-)
+);
 

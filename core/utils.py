@@ -54,6 +54,18 @@ def calculate_total_cost(items: dict) -> float:
                                      float(item["discount"]), int(item["tax_rate"]))
     return total_cost
 
+def send_cart_items(items: dict) -> dict:
+    """
+    Calculates the total cost of a set of items.
+
+    args:
+        - items: A dictionary of items to calculate the total cost of.
+
+    returns:
+        - The total cost of the sale as a float.
+    """
+    return items
+
 
 def generate_unique_id() -> str:
     """

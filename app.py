@@ -13,6 +13,7 @@ db = Database('database/storeRecords.db')
 products = db.get_full_inventory()
 sessions = Sessions()
 sessions.add_new_session(username, db)
+sales = db.get_full_sales_information()
 
 
 @app.route('/')
@@ -147,16 +148,18 @@ def checkout():
         - sessions: adds items to the user's cart
     """
     order = {}
+    itemss = {}
     user_session = sessions.get_session(username)
     for item in products:
-        print(f"item ID: {item['id']}")
+        # print(f"item ID: {item['id']}")
         if request.form[str(item['id'])] > '0':
             count = request.form[str(item['id'])]
             order[item['item_name']] = count
             user_session.add_new_item(
                 item['id'], item['item_name'], item['price'], count)
-    user_session.submit_cart()
-    return render_template('checkout.html', order=order, sessions=sessions, total_cost=user_session.total_cost)
+    items = user_session.submit_cart()
+    # sales = db.get_full_sales_information()
+    return render_template('checkout.html', order=order, sessions=sessions, total_cost=user_session.total_cost, items=items)
 
 
 if __name__ == '__main__':
