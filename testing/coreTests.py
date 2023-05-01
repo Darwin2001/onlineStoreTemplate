@@ -1,5 +1,8 @@
 from core.session import Sessions, UserSession
 from database.db import Database
+from core.utils import calculate_total_cost
+
+
 
 
 def test_init_sessions() -> tuple:
@@ -145,3 +148,21 @@ def test_get_session_db() -> tuple:
         return False, error
     else:
         return True, "Session's database is correct."
+
+def test_calculate_total_cost() -> tuple:
+    items = {
+        'name': 'lizard',
+        'price': 2.0,
+        'quantity': 0,
+        'discount': 0,
+        'tax_rate': 0
+    }
+    num = calculate_total_cost(items)
+
+    if num != 2:
+        error = f"Error in test_calculate_total_cost: incorrect totals\n  - Expected: 2\n  - Actual: {num}"
+        return False, error
+    else:
+        return True, "calculation is correct."
+    
+

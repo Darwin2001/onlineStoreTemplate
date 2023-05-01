@@ -1,0 +1,5 @@
+I ran monish's test it works great.
+all my changes were front end changes and were impossible to be tested.
+I made a lot of changes to checkout.html which enables the user to see what their order was and see what items they purchased how many,and the cost.
+you can see these changes everytime you open checkout.html and see whether or not the page is functioning 
+the only testable thing available is the calculate_total_cost function
