@@ -3,7 +3,7 @@
 Login
 {%endblock%}
 {% block content %}
-<div class="row" id="info_row">
+<div class="row form-heading" id="info_row">
     <h3>Welcome back!</h3>
     <div class="col-md-12" id="login_class">
         <form action="/home" method="post" id="login_form">
@@ -14,6 +14,24 @@ Login
             <div class="form-group" id="info_form_group">
                 <label for=" password">Password</label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary" id="login_button">Login</button>
+        </form>
+    </div>
+</div>
+<br>
+<br>
+<div class="row margin-login" id="info_row">
+    <h3>Admin Login</h3>
+    <div class="col-md-12" id="login_class">
+        <form action="/admin" method="post" id="admin_form">
+            <div class="form-group" id="info_form_group">
+                <label for="username-admin">Username</label>
+                <input type="text" class="form-control" id="username-admin" name="username-admin" placeholder="Enter username">
+            </div>
+            <div class="form-group" id="info_form_group">
+                <label for=" password-admin">Password</label>
+                <input type="password" class="form-control" id="password-admin" name="password-admin" placeholder="Password">
             </div>
             <button type="submit" class="btn btn-primary" id="login_button">Login</button>
         </form>

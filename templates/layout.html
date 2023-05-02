@@ -21,7 +21,7 @@
   <div class="overflow-hide">
      <!-- Monish Soundar Raj  - new navbar-->
      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">SHOEEE</a>
+        <a class="navbar-brand" href="{{url_for ('index_page')}}">Kicks for All</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -32,10 +32,13 @@
               <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"></a>
+              <a class="nav-link" href="{{url_for('login_page')}}"></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"></a>
+                <a class="nav-link" href="{{url_for('register_page')}}"></a>
+            </li>
+            <li class="navitem">
+              <a class="nav-link" href="{{url_for('checkout_page')}}"></a>
             </li>
           </ul>
           <ul class="navbar-nav">

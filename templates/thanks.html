@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{%block title%}
+Shoe Store
+{%endblock%}
+
+{%block nav%}
+<li class="nav-item">
+    <a href="/login" class="nav-link">LOGIN</a>
+</li>
+<li>
+    <a href="/register" class="nav-link">REGISTER</a>
+</li>
+<li>
+    <a href="/contactUs" class="nav-link">CONTACT US</a>
+</li>
+{%endblock%}
+{% block content %}
+<!-- <div class="row">
+    <div class="col-md-12" id="index_buttons">
+        <a href="/login" class="btn btn-primary" id="login_button">Login</a>
+        <a href="/register" class="btn btn-primary" id="register_button">Register</a>
+    </div>
+</div> -->
+<h1 class="thanks-heading">Thank You!</h1>
+<p class="thanks-text">Thank you so much for reaching out to us, we are very concerned with your issue and promise you we are doing the best
+    we can to get back to you. With that being a response takes roughly 3-5 business days and a representative will be
+    in contact with you. Please feel free to continue shopping and go about your day. Thank you for taking the time to
+    visit our site!</p>
+<br>
+<div class="col-md-12" id="index_buttons">
+<button type="submit" class="btn btn-primary" id="checkout_button"><a href="{{ url_for('index_page') }}">Return to Home Page</a></button>
+</div>
+
+{% endblock %}

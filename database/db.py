@@ -732,3 +732,57 @@ class Database:
         self.cursor.execute(
             "UPDATE sales SET cost = ? WHERE id = ?", (new_cost, sale_id))
         self.connection.commit()
+
+        # -- Troubleshoot database commands ----
+        #---------------------------------------
+        #---------------------------------------
+
+
+        """
+            This section of commands was made by Darwin Peraza
+        """
+
+    def insert_new_troubleshoot(self,email:str,first_name:str,last_name:str,problem_type:str,description:str):
+        """
+        Inserts a new troubleshoot ticket
+
+        args:
+            - email : user's email to contact back 
+            - first_name: User's first name 
+            - last_name: User's last name 
+            - problem_type: Describes the type of problem the user is experiencing
+            - description: further describes the problem at hand
+
+        returns:
+            - None
+        """
+        self.cursor.execute(
+            "INSERT INTO troubleshoot (email,first_name,last_name,problem_type,description) VALUES (?, ?, ?, ?, ?)",
+            (email,first_name,last_name,problem_type,description))
+        self.connection.commit()
+    def get_all_troubleshoot(self):
+
+        """
+
+        Pulls all the ticket information from troubleshoot database 
+
+        """
+
+        self.cursor.execute("SELECT * FROM troubleshoot")
+        return self.cursor.fetchall()
+    
+        #---------------------------------------
+        #-----------Admin Commands--------------
+        #---------------------------------------
+
+    def admin_check(self):
+        """
+        This serves to check whether or not the username appears in the admin table
+
+        args: 
+            - username : username of the person trying to login 
+
+        return dict containing usernames of admins
+        """
+        self.cursor.execute("SELECT * FROM admins")
+        return self.cursor.fetchall()

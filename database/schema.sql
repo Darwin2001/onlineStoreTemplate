@@ -28,10 +28,21 @@ CREATE TABLE sales (
     FOREIGN KEY (item_id) REFERENCES inventory(id)
 );
 CREATE TABLE cart(
-    username VARCHAR(255) NOT NULL
+    username VARCHAR(255) NOT NULL,
     item_id INTEGER NOT NULL,
     quantity INTEGER NOT NULL,
     FOREIGN KEY (username) REFERENCES users(username),
     FOREIGN KEY (item_id) REFERENCES inventory(id)
+);
+CREATE TABLE troubleshoot(
+    email VARCHAR(255) NOT NULL,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    problem_type VARCHAR(255) NOT NULL,
+    description  VARCHAR(255) NOT NULL,
+);
+CREATE TABLE admins(
+    username varchar(255) NOT NULL,
+    FOREIGN KEY (username) REFERENCES users(username)
 );
 

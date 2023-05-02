@@ -3,6 +3,7 @@
     margin: 0 auto;
     width: 250px;
     height: 125px;
+    text-align: center;
 }
 
 #login_button {
@@ -43,15 +44,18 @@
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 302px;
+    width: 400px;
     background-color: #cac2c2;
     border: 1px solid rgb(178, 178, 178);
     height: 500px;
+    text-align: center;
 }
 
 .product_card-img {
     width: 300px;
-    height: 300px;
+    height: 200px;
+    margin-bottom: 12%;
+    margin-top: 13%
 }
 
 .product_card-title {
@@ -82,15 +86,16 @@
     font-style: italic;
 }
 
-#add_to_cart_button {
+button {
     background-color: #49f4d8;
     border-color: #ccc;
     color: rgb(32, 30, 30);
     width: 60px;
     font-weight: bold;
+    
     margin-top: 10px;
     margin-bottom: 10px;
-    text-align: center;
+    
 }
 
 
@@ -271,4 +276,23 @@
 
 .total-price-cart{
   padding-left: 40px;
+}
+
+/*Darwin Peraza*/
+
+.thanks-text{
+  font-size: 20px;
+  text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+  text-align: center;
+}
+.thanks-heading{
+  font-size:30px;
+  font-style:bold; 
+  text-align: center;
+}
+.form-heading{
+  top:100px;
 }

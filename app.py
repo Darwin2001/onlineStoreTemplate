@@ -30,6 +30,42 @@ def index_page():
     # print(products)
     return render_template('index.html', username=username, products=products, sessions=sessions)
 
+@app.route('/thanks')
+def thanks_page():
+    """
+    This page turns to a webpage that thanks the user for filling form and returns them to homepage.
+    Created by Darwin Peraza 
+    """
+
+    return render_template("thanks.html")
+
+
+@app.route('/contactUs')
+def contact_page():
+    """""
+    Created by Darwin Peraza, This renders the contact us page 
+
+    args:
+        - None
+    
+    returns: 
+        - None
+    """
+    return render_template('contactUs.html')
+
+@app.route("/contactUs" , methods=['POST'])
+def contact_send():
+    email = request.form["email"]
+    first_name = request.form["first_name"]
+    last_name = request.form["last_name"]
+    problem_type = request.form["problem_type"]
+    description = request.form["description"]
+
+    db.insert_new_troubleshoot(email,first_name,last_name,problem_type,description)
+
+    return redirect(url_for("thanks_page"))
+
+
 @app.route('/login')
 def login_page():
     """
@@ -160,6 +196,43 @@ def checkout():
     items = user_session.submit_cart()
     # sales = db.get_full_sales_information()
     return render_template('checkout.html', order=order, sessions=sessions, total_cost=user_session.total_cost, items=items)
+
+@app.route('/admin',methods=["POST", "GET"])
+def adminLogin():
+      
+      """
+
+        This method checks for admin credentials, created by Darwin Peraza 
+
+
+      """
+      username = request.form['username-admin']
+      password = request.form['password-admin']
+      admins = db.admin_check()
+      converted_admins = get_values(admins,"username")
+      troubleshoot = db.get_all_troubleshoot()
+      
+      if(login_pipeline(username,password) and username in converted_admins):
+        return render_template("admin.html", username=username, troubleshoot=troubleshoot)
+      else:
+        return redirect(url_for("login_page"))
+          
+
+def get_values(lst, key):
+
+    """
+
+    This method takes values from key value pairs and translates them into a list
+    
+    """
+    result = []
+    for dictionary in lst:
+        if key in dictionary:
+            result.append(dictionary[key])
+    return result
+
+
+
 
 
 if __name__ == '__main__':

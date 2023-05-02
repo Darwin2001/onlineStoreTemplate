@@ -66,3 +66,6 @@ VALUES ('2', 'dritchie', '2', 10, '2022-12-21 7:30:30', 5.50);
 
 INSERT into `sales` (`transaction_id`, `username`, `item_id`, `quantity`, `sale_date`, `cost`)
 VALUES ('3', 'llamport', '3', 10, '2022-12-21 7:30:30', 5.50);
+
+INSERT INTO 'admins' ('username')
+values("DarwinPeraza");

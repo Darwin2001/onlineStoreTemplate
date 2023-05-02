@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Hello, {{username}}</h1>
+<div class="row" id="products_page">
+    <div class="col-md-12">
+        <h3>List of reciepts for help desk</h3>
+
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Email</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Problem Type</th>
+                    <th scope="col">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ticket in troubleshoot %}
+                <tr>
+                    <td>{{ticket.email}}</td>
+                    <td>{{ticket.first_name}} {{ticket.last_name}}</td>
+                    <td>{{ticket.problem_type}}</td>
+                    <td>{{ticket.description}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

@@ -1,3 +1,3 @@
 chmod +x *.sh
 cd database && chmod +x *.sh && ./resetDB.sh && cd ..
-pip install -r requirements.txt
+pip3 install -r requirements.txt

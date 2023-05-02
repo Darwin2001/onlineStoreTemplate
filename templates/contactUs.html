@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{%block title%}
+Contact Us
+{%endblock%}
+{%block nav%}
+{%endblock%}
+{% block content %}
+<div class="row" id="info_row" text-align="center">
+    <div class="col-md-6" text-align="center">
+        <h3></h3>
+        <form action="/contactUs" method="POST">
+            <div class="form-group" id="info_form_group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control">
+            </div>
+            <div class="form-group" id="info_form_group">
+                <label for="first_name">First Name</label>
+                <input type="text" name="first_name" id="first_name" class="form-control">
+            </div>
+            <div class="form-group" id="info_form_group">
+                <label for="last_name">Last Name</label>
+                <input type="text" name="last_name" id="last_name" class="form-control">
+            </div>
+            <div class="form-group" id="info_form_group">
+                <label for ="problem_type">What type of Issue do you have?:</label>
+                <select name="problem_type" id="problem_type">
+                    <option value="null">Select One:</option>
+                    <option value = "Shipping Issue">An issue with shipping</option>
+                    <option value="Payment Issue">Payment Discrepancy</option>
+                    <option value="Order Issue">Issue with a recieved item</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group" id="info_form_group">
+                <label for="description">Description of the issue:</label>
+                <br>
+                <textarea id="description" name="description" rows="4" col="4" text-align="center" placeholder="Please tell us about your problems"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="register_button">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
