@@ -1,0 +1,3 @@
+When it came to testing, I was making mostly front end changes and only worked on the backend when creating my database. 
+For testing my database I had db browser for sql lite in order to see how the database changed with my methods as well as using 
+the flask live server to see changes.
